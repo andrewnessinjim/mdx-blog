@@ -17,7 +17,6 @@ function RootLayout({ children }) {
   return (
     <RespectMotionPreferences>
       <ThemeProvidedRoot
-        lang="en"
       >
         <body>
           <Header />

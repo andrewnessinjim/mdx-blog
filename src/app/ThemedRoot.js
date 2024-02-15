@@ -27,6 +27,7 @@ function ThemedRoot(props) {
         data-color-theme={currentTheme}
         style={currentTheme === "light" ? LIGHT_TOKENS : DARK_TOKENS}
         className={clsx(mainFont.variable, monoFont.variable)}
+        lang="en"
         {...props}
       />
   );
