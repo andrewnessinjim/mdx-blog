@@ -1,13 +1,10 @@
 import React from 'react';
-import clsx from 'clsx';
+import { StWrapper } from './Slider.styled';
 
-import styles from './Slider.module.css';
-
-function Slider({ className, ...delegated }) {
+function Slider({ ...delegated }) {
   return (
-    <input
+    <StWrapper
       type="range"
-      className={clsx(styles.slider, className)}
       {...delegated}
     />
   );

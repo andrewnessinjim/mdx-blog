@@ -1,13 +1,11 @@
 import React from 'react';
-import clsx from 'clsx';
+import { StWrapper } from './Card.styled';
 
-import styles from './Card.module.css';
-
-function Card({ children, className, ...delegated }) {
+function Card({ children, ...delegated }) {
   return (
-    <div className={clsx(styles.wrapper, className)} {...delegated}>
+    <StWrapper {...delegated}>
       {children}
-    </div>
+    </StWrapper>
   );
 }
 

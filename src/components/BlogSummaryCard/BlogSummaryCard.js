@@ -1,10 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import { format } from 'date-fns';
 
-import Card from '@/components/Card';
-
-import styles from './BlogSummaryCard.module.css';
+import { StArrow, StContinueReadingLink, StTitle, StWrapper } from './BlogHero.styled.js';
 
 function BlogSummaryCard({
   slug,
@@ -19,22 +16,21 @@ function BlogSummaryCard({
   );
 
   return (
-    <Card className={styles.wrapper}>
-      <Link href={href} className={styles.title}>
+    <StWrapper>
+      <StTitle href={href}>
         {title}
-      </Link>
+      </StTitle>
       <time dateTime={publishedOn}>{humanizedDate}</time>
       <p>
         {abstract}{' '}
-        <Link
+        <StContinueReadingLink
           href={href}
-          className={styles.continueReadingLink}
         >
           Continue reading{' '}
-          <span className={styles.arrow}>→</span>
-        </Link>
+          <StArrow>→</StArrow>
+        </StContinueReadingLink>
       </p>
-    </Card>
+    </StWrapper>
   );
 }
 

@@ -1,18 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
 import { BLOG_TITLE } from '@/constants';
 
-import styles from './Logo.module.css';
+import { StWrapper } from './Logo.styled';
 
 function Logo({ mobileAlignment = 'left' }) {
   return (
-    <Link
+    <StWrapper
       href="/"
-      className={styles.wrapper}
       data-mobile-alignment={mobileAlignment}
     >
       {BLOG_TITLE}
-    </Link>
+    </StWrapper>
   );
 }
 

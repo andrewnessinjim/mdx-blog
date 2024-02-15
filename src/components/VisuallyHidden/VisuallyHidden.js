@@ -1,21 +1,19 @@
 import React from 'react';
-import clsx from 'clsx';
 
-import styles from './VisuallyHidden.module.css';
+import { StWrapper } from './VisuallyHidden.styled';
 
 function VisuallyHidden({
   as: Element = 'span',
-  className,
   children,
   ...delegated
 }) {
   return (
-    <Element
-      className={clsx(styles.wrapper, className)}
+    <StWrapper
+      as={Element}
       {...delegated}
     >
       {children}
-    </Element>
+    </StWrapper>
   );
 }
 

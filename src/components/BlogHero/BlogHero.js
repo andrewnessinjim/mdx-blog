@@ -1,13 +1,10 @@
 import React from 'react';
 import { format } from 'date-fns';
-import clsx from 'clsx';
-
-import styles from './BlogHero.module.css';
+import { StContent, StWrapper } from './BlogHero.styled';
 
 function BlogHero({
   title,
   publishedOn,
-  className,
   ...delegated
 }) {
   const humanizedDate = format(
@@ -16,11 +13,10 @@ function BlogHero({
   );
 
   return (
-    <header
-      className={clsx(styles.wrapper, className)}
+    <StWrapper
       {...delegated}
     >
-      <div className={styles.content}>
+      <StContent >
         <h1>{title}</h1>
         <p>
           Published on{' '}
@@ -28,8 +24,8 @@ function BlogHero({
             {humanizedDate}
           </time>
         </p>
-      </div>
-    </header>
+      </StContent>
+    </StWrapper>
   );
 }
 

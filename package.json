@@ -5,13 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "next lint",
     "new-component": "new-component"
   },
   "dependencies": {
     "bright": "0.8.4",
-    "clsx": "1.2.1",
     "date-fns": "2.30.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
@@ -24,6 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "2.0.10",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "styled-components": "^6.1.8"
   }
 }

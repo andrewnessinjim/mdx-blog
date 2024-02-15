@@ -1,21 +1,21 @@
 import React from 'react';
 
 import Slider from '@/components/Slider';
-import styles from './SliderControl.module.css';
+import { StHeader, StLabel, StValue, StWrapper } from './SliderControl.styled';
 
 function SliderControl({ label, value, ...delegated }) {
   const id = React.useId();
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.header}>
-        <label htmlFor={id} className={styles.label}>
+    <StWrapper>
+      <StHeader>
+        <StLabel htmlFor={id}>
           {label}
-        </label>
-        <span className={styles.value}>{value}</span>
-      </div>
+        </StLabel>
+        <StValue>{value}</StValue>
+      </StHeader>
       <Slider {...delegated} value={value} id={id} />
-    </div>
+    </StWrapper>
   );
 }
 

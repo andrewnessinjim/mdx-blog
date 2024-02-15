@@ -1,20 +1,23 @@
-.wrapper {
+import styled from "styled-components";
+
+export const StWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-.header {
+`;
+
+export const StHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
+`;
 
-.label {
+export const StLabel = styled.label`
   font-size: 1.125rem;
   font-weight: 550;
-}
+`;
 
-.value {
+export const StValue = styled.span`
   font-size: 1.125rem;
   font-weight: 400;
-}
+`;

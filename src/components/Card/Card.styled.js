@@ -1,4 +1,6 @@
-.wrapper {
+import styled from "styled-components";
+
+export const StWrapper = styled.div`
   padding: var(--viewport-padding);
   margin-left: calc(var(--viewport-padding) * -1);
   margin-right: calc(var(--viewport-padding) * -1);
@@ -6,10 +8,10 @@
   background: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   box-shadow: var(--shadow-card);
-}
 
-@media (min-width: 56rem) {
-  .wrapper {
-    border-radius: 8px !important;
+  @media (min-width: 56rem) {
+    & {
+      border-radius: 8px !important;
+    }
   }
-}
+`;

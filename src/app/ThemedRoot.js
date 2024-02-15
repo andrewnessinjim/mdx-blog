@@ -2,7 +2,6 @@
 
 import { ThemeContext } from "@/components/ThemeProvider";
 import { DARK_TOKENS, LIGHT_TOKENS } from "@/constants";
-import clsx from "clsx";
 import { Spline_Sans_Mono, Work_Sans } from "next/font/google";
 import React from "react";
 
@@ -26,7 +25,7 @@ function ThemedRoot(props) {
       <html
         data-color-theme={currentTheme}
         style={currentTheme === "light" ? LIGHT_TOKENS : DARK_TOKENS}
-        className={clsx(mainFont.variable, monoFont.variable)}
+        className={`${mainFont.variable} ${monoFont.variable}`}
         lang="en"
         {...props}
       />

@@ -1,4 +1,8 @@
-.wrapper {
+"use client";
+
+import styled from "styled-components";
+
+export const StWrapper = styled.header`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -9,14 +13,15 @@
   padding: 0 var(--viewport-padding);
   margin-left: auto;
   margin-right: auto;
-}
+`;
 
-.actions {
+export const StActions = styled.div`
   display: flex;
   gap: 16px;
   align-items: center;
-}
-.action {
+`;
+
+export const StAction = styled.button`
   display: block;
   border: none;
   background: transparent;
@@ -29,10 +34,12 @@
   color: var(--color-text);
   cursor: pointer;
   transition: background 200ms;
-}
-.action:hover {
-  background: var(--color-decorative-100);
-}
-.action svg {
-  display: block;
-}
+
+  &:hover {
+    background: var(--color-decorative-100);
+  }
+
+  & svg {
+    display: block;
+  }
+`;

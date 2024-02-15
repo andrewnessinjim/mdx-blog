@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import "./styles.css";
 import RespectMotionPreferences from "@/components/RespectMotionPreferences";
 import ThemeProvidedRoot from "./ThemeProvidedRoot";
+import StyledComponentsRegistry from "@/components/StyledComponentsRegistry";
 
 export const metadata = {
   title: BLOG_TITLE,
@@ -16,14 +17,15 @@ export const metadata = {
 function RootLayout({ children }) {
   return (
     <RespectMotionPreferences>
-      <ThemeProvidedRoot
-      >
-        <body>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </body>
-      </ThemeProvidedRoot>
+      <StyledComponentsRegistry>
+        <ThemeProvidedRoot>
+          <body>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </body>
+        </ThemeProvidedRoot>
+      </StyledComponentsRegistry>
     </RespectMotionPreferences>
   );
 }

@@ -1,23 +1,21 @@
 import React from 'react';
-import clsx from 'clsx';
 import { Rss } from 'react-feather';
 
 import Logo from '@/components/Logo';
 import VisuallyHidden from '@/components/VisuallyHidden';
 
-import styles from './Header.module.css';
 import ThemeToggle from '../ThemeToggle';
+import { StAction, StActions, StWrapper } from './Header.styled';
 
-function Header({ theme, className, ...delegated }) {
+function Header({ ...delegated }) {
   return (
-    <header
-      className={clsx(styles.wrapper, className)}
+    <StWrapper
       {...delegated}
     >
       <Logo />
 
-      <div className={styles.actions}>
-        <button className={styles.action}>
+      <StActions>
+        <StAction>
           <Rss
             size="1.5rem"
             style={{
@@ -28,10 +26,10 @@ function Header({ theme, className, ...delegated }) {
           <VisuallyHidden>
             View RSS feed
           </VisuallyHidden>
-        </button>
+        </StAction>
         <ThemeToggle />
-      </div>
-    </header>
+      </StActions>
+    </StWrapper>
   );
 }
 

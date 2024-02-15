@@ -1,16 +1,14 @@
-import React from 'react';
-import { Code } from 'bright';
+import React from "react";
 
-import theme from './theme';
-import styles from './CodeSnippet.module.css';
+import theme from "./theme";
+import { StWrapper } from "./CodeSnippet.styled";
+import { Code } from "bright";
 
 function CodeSnippet(props) {
   return (
-    <Code
-      {...props}
-      theme={theme}
-      className={styles.wrapper}
-    />
+    <StWrapper>
+      <Code {...props} theme={theme} />
+    </StWrapper>
   );
 }
 
